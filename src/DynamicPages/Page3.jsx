@@ -25,6 +25,7 @@ export default class Page3 extends React.Component{
                       return type
                       }))
             item_ID=(parseInt(tempID[0],10))
+            //item_ID=(tempID[0])
     }
 
     componentDidMount() {

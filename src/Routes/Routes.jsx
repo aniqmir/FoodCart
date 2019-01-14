@@ -10,7 +10,10 @@ import Page2 from '../DynamicPages/Page2.jsx';
 import Page3 from '../DynamicPages/Page3.jsx';
 import Cart from '../DynamicPages/Cart.jsx';
 
+
 const customHistory = createBrowserHistory();
+
+
 
 const CustomRoutes = () => (
     <Router history={customHistory}>

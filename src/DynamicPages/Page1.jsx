@@ -2,8 +2,13 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Item from '../DynamicPages/Page1Item/Item.jsx'
 
+
 export default class Page1 extends React.Component{
 
+    constructor(props){
+        super(props)
+
+    }
     render(){
         
         

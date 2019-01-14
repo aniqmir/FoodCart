@@ -10,6 +10,7 @@ import Image from '../../Images/image1.jpg'
 import Add from '@material-ui/icons/Add';
 import Snackbar from './Snackbar.jsx';
 
+
 const styles = theme => ({
   card: {
     display: 'flex',
