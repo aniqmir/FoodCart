@@ -2,16 +2,17 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Item from '../DynamicPages/Page1Item/Item.jsx'
 
+import idGenerator from 'react-id-generator';
 
 export default class Page1 extends React.Component{
 
     constructor(props){
         super(props)
-
-    }
+      
+        this.htmlId = idGenerator();
+      }
     render(){
-        
-        
+          
     const signature = {
         item1 : {
             name:'Item 1',
@@ -94,12 +95,12 @@ export default class Page1 extends React.Component{
                 {Object.values(signature).map((type,index) => {
                     return (
                         <Grid item xs={12} sm={4} md={4}>
-                            <Item
-                            name={type.name}
-                            description={type.description}
-                            price={type.price}
-                            id={type.id}
-                            history={this.props.history} />
+                                <Item
+                                name={type.name}
+                                description={type.description}
+                                price={type.price}
+                                id={index*(Math.floor(Math.random()))+Math.floor(Math.random()*(999)) }
+                                history={this.props.history} />
                         </Grid>
                     );
                 })
@@ -114,7 +115,7 @@ export default class Page1 extends React.Component{
                             name={type.name}
                             description={type.description}
                             price={type.price}
-                            id={type.id}
+                            id={index*(Math.floor(Math.random()))+Math.floor(Math.random()*(999))}
                             history={this.props.history}/>
                         </Grid>
                     );

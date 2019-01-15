@@ -7,7 +7,11 @@ import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { CardActions } from '@material-ui/core';
+// import IconButton from '@material-ui/core/IconButton';
+// import Add from '@material-ui/icons/Add';
 
+
+// var array2
 
 const styles = theme => ({
     card: {
@@ -61,10 +65,41 @@ class Cart extends React.Component {
         this.state = {
             check : JSON.parse(localStorage.getItem('cart')),
             totalPrice:0,
+            // quantity:this.props.quantity
         }
     }
     
-    
+    // add = () => {
+    //     this.setState({quantity : this.state.quantity + 1})
+
+    //         var array = JSON.parse(localStorage.getItem('cart'));
+    //         if(array!==null){
+    //             for (var i=0;i<array.length;i++){
+    //                 if(array[i][5]===this.props.id){
+    //                    // console.log('in if')
+    //                    array2 = array.splice(i,1)
+    //                 }
+    //             }
+                
+    //             array2[0][4] = this.state.quantity
+    //             console.log(array2[0][4])
+    //         }
+    //         eliminarHandle(this.props.id);
+    //         localStorage.setItem('cart',JSON.stringify(array2))
+    // }
+  
+    // negate = () => {
+    //   if(this.state.quantity<1)
+    //   {
+    //     this.setState({
+    //       quantity:this.state.quantity
+    //     })
+    //   }
+    //   else {
+    //     this.setState({quantity : this.state.quantity - 1})
+    //   }
+    // }
+
     componentDidMount=()=>{
         let total = 0;
         
@@ -103,7 +138,7 @@ class Cart extends React.Component {
 
     render() {
         const { classes } = this.props;
-        if(this.props.id<=19){
+        if(this.props.id<=999){
             return (
                 <div className="container">
                      <Card className={classes.card}>
@@ -137,6 +172,9 @@ class Cart extends React.Component {
                                         <Button  variant="contained" color="primary" style={button2Style} onClick={()=>this.editarHandle(this.props.id)}>
                                         EDITAR
                                         </Button>
+                                        {/* <IconButton color="default"  onClick={()=>this.add()}><Add/></IconButton>
+                                          <div>{this.state.quantity}</div>
+                                        <IconButton color="default" className={classes.button} onClick={()=>this.negate()}>-</IconButton> */}
                                     </CardActions>
                                     </div>
                                      </div>         

@@ -77,7 +77,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://www.seriouseats.com/recipes/images/2017/06/20170526-no-bake-cheesecake-vicky-wasik-18-625x469.jpg)`,
             img:image2,
             quantity:1,
-            id:20,
+            id:'p20',
         },
         p2:{
             name:'postres2',
@@ -86,7 +86,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://www.seriouseats.com/recipes/images/2017/06/20170526-no-bake-cheesecake-vicky-wasik-18-625x469.jpg)`,
             img:image2,
             quantity:1,
-            id:21,
+            id:'p21',
         },
         p3:{
             name:'postres3',
@@ -95,7 +95,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://www.seriouseats.com/recipes/images/2017/06/20170526-no-bake-cheesecake-vicky-wasik-18-625x469.jpg)`,
             img:image2,
             quantity:1,
-            id:22,
+            id:'p22',
         },
         p4:{
             name:'postres4',
@@ -104,7 +104,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://www.seriouseats.com/recipes/images/2017/06/20170526-no-bake-cheesecake-vicky-wasik-18-625x469.jpg)`,
             img:image2,
             quantity:1,
-            id:23,
+            id:'p23',
         },
     }
     const entradas = {
@@ -115,7 +115,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://therecipecritic.com/wp-content/uploads/2018/08/zucchini_crust_pizza-1-of-1.jpg)`,
             img:image3,
             quantity:1,
-            id:24,
+            id:'p24',
         },
         e2:{
             name:'entradas2',
@@ -124,7 +124,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://therecipecritic.com/wp-content/uploads/2018/08/zucchini_crust_pizza-1-of-1.jpg)`,
             img:image3,
             quantity:1,
-            id:25,
+            id:'p25',
         },
         e3:{
             name:'entradas3',
@@ -133,7 +133,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://therecipecritic.com/wp-content/uploads/2018/08/zucchini_crust_pizza-1-of-1.jpg)`,
             img:image3,
             quantity:1,
-            id:26,
+            id:'p26',
         },
         e4:{
             name:'entradas4',
@@ -142,7 +142,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://therecipecritic.com/wp-content/uploads/2018/08/zucchini_crust_pizza-1-of-1.jpg)`,
             img:image3,
             quantity:1,
-            id:27,
+            id:'p27',
         },
     }
     const bebidas = {
@@ -153,7 +153,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://therecipecritic.com/wp-content/uploads/2018/08/zucchini_crust_pizza-1-of-1.jpg)`,
             img:image3,
             quantity:1,
-            id:28,
+            id:'p28',
         },
         b2:{
             name:'bebidas2',
@@ -162,7 +162,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://therecipecritic.com/wp-content/uploads/2018/08/zucchini_crust_pizza-1-of-1.jpg)`,
             img:image3,
             quantity:1,
-            id:29,
+            id:'p29',
         },
         b3:{
             name:'bebidas3',
@@ -171,7 +171,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://therecipecritic.com/wp-content/uploads/2018/08/zucchini_crust_pizza-1-of-1.jpg)`,
             img:image3,
             quantity:1,
-            id:30,
+            id:'p30',
         },
         b4:{
             name:'bebidas4',
@@ -180,7 +180,7 @@ class FloatingActionButtonZoom extends React.Component {
             image:`url(https://therecipecritic.com/wp-content/uploads/2018/08/zucchini_crust_pizza-1-of-1.jpg)`,
             img:image3,
             quantity:1,
-            id:31,
+            id:'p31',
         },
     }
 

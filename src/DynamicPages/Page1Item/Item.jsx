@@ -4,11 +4,12 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import IconButton from '@material-ui/core/IconButton';
+// import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import Image from '../../Images/image1.jpg'
-import Add from '@material-ui/icons/Add';
+// import Add from '@material-ui/icons/Add';
 import Snackbar from './Snackbar.jsx';
+
 
 
 const styles = theme => ({
@@ -62,6 +63,7 @@ class MediaControlCard extends React.Component {
     this.state={
       quantity:1
     }
+   
   }
   componentDidMount () {
     if(localStorage.getItem('cart')!==null) {
@@ -126,9 +128,9 @@ class MediaControlCard extends React.Component {
         </CardContent>
             <div className={classes.controls}>
             <h3>{this.props.price}</h3>
-            <IconButton color="default"  onClick={()=>this.add()}><Add/></IconButton>
+            {/* <IconButton color="default"  onClick={()=>this.add()}><Add/></IconButton>
             <div>{this.state.quantity}</div>
-            <IconButton color="default" className={classes.button} onClick={()=>this.negate()}>-</IconButton>
+            <IconButton color="default" className={classes.button} onClick={()=>this.negate()}>-</IconButton> */}
             </div>
             <div className={classes.buttonControls}>
                 <Snackbar buttonHandler={()=>this.buttonHandler()}/>

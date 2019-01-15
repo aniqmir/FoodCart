@@ -5,7 +5,8 @@ import { Button } from '@material-ui/core';
 // import Add from '@material-ui/icons/Add';
 import Item1 from './Page3Item/Item1.jsx'
 import ToGoWith from './Page3Item/ToGoWith.jsx'
-
+import IconButton from '@material-ui/core/IconButton';
+import Add from '@material-ui/icons/Add';
 
 let cartIngredients = []
 var item_ID
@@ -17,7 +18,8 @@ export default class Page3 extends React.Component{
     constructor (props) {
         super(props);
         this.state = {color:'default',
-                      data:''}
+                      data:'',
+                    quantity:1}
     }
 
     componentWillMount() {
@@ -39,13 +41,30 @@ export default class Page3 extends React.Component{
             }
             //console.log(array2)
             this.setState({
-                data:array2
+                data:array2,
+                quantity:array2[0][4]
             })
         }
         else{
             array = ['nothing']
         }
         
+    }
+    
+    add = () => {
+        this.setState({quantity : this.state.quantity + 1})
+    }
+  
+    negate = () => {
+      if(this.state.quantity<1)
+      {
+        this.setState({
+          quantity:this.state.quantity
+        })
+      }
+      else {
+        this.setState({quantity : this.state.quantity - 1})
+      }
     }
 
     func = (ingredients) => {
@@ -74,9 +93,11 @@ export default class Page3 extends React.Component{
         this.ingredientsCheck();
         }
         
-        
+        array3[0][4]=this.state.quantity
+
         if((cartIngredients.length!==0)){
           
+           
             array3[0].push(cartIngredients)
             if(array3[0][7]!==undefined){
                 array3[0].pop()
@@ -210,17 +231,16 @@ export default class Page3 extends React.Component{
                  }  
 
                     <Grid container spacing={40} justify="center" alignItems="center">
+                            
+                            <IconButton color="default"  onClick={()=>this.add()}><Add/></IconButton>
+                              <div>{this.state.quantity}</div>
+                             <IconButton color="default" onClick={()=>this.negate()}>-</IconButton>
                         
-                        <Grid item xs={6} md={6}>
-                            <div>
-                            {/* <IconButton color="default"><Add/></IconButton>
-                            <IconButton color="default">-</IconButton> */}
-                            </div>
-                        </Grid>
-
+ 
                         <Grid item xs={6} md={6}>
                             <Button size='large' style={{width:'100%', backgroundColor:'black', color:'white'}} onClick={()=>this.aggregrarAL()}>Aggregrar Al Carreto</Button>
                         </Grid>
+                        
                     </Grid>
                     </Grid>
                 </div>
