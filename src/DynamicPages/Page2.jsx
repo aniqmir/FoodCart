@@ -104,7 +104,7 @@ export default class Page2 extends React.Component{
             {
                 Object.values(item3).map((type,index)=> {
                     return (
-                        <Grid item xs={12} md={3}>
+                        <Grid item xs={12} md={3} key={index}>
                         <h2><Item3 history={this.props.history}/></h2>
                         <h3>{type.name}</h3>
                         <p>{type.desc}</p>
@@ -119,7 +119,7 @@ export default class Page2 extends React.Component{
             <Grid container spacing={0} justify="center" alignItems="center" direction="row">
             <Grid container item xs={12} sm={12} md={6}>
                 <Grid container spacing={0}>
-                    <Grid item  xs={2} justify="center" alignItems="center">
+                    <Grid container item  xs={2} justify="center" alignItems="center">
                     </Grid>
                     <Grid item xs={10}>
                     <h1>Restaurantes</h1>
@@ -141,7 +141,7 @@ export default class Page2 extends React.Component{
             </Hidden>
             <Grid container item xs={12} sm={12} md={6}>
                 <Grid container spacing={0}>
-                    <Grid item  xs={2} justify="center" alignItems="center">
+                    <Grid item container xs={2} justify="center" alignItems="center">
                     </Grid>
                     <Grid item xs={10}>
                     <h1>Eventes</h1>
@@ -167,7 +167,7 @@ export default class Page2 extends React.Component{
                     <h1>LOREM IPSUM SIT EMET DOLOR</h1>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 <Grid item xs={12} style={{paddingLeft:'35%',}}>
-                    <Button variant="raised" style={{backgroundColor:'black', color:'white', width:'50%'}}>VER MAS</Button>
+                    <Button variant="contained" style={{backgroundColor:'black', color:'white', width:'50%'}}>VER MAS</Button>
                 </Grid>
                 </Grid>
                 </Grid>

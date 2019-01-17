@@ -139,48 +139,57 @@ class Cart extends React.Component {
     render() {
         const { classes } = this.props;
         if(this.props.id<=999){
+            
             return (
-                <div className="container">
-                     <Card className={classes.card}>
-                                    <CardMedia
-                                        className={classes.cover}
-                                        image={this.props.image}
-                                        title="This is an item"
-                                        />
-                                    <div className={classes.details}>
-                                    <CardContent className={classes.content}>
-                                    <Typography component="h5" variant="h5">
-                                        Name:{this.props.name}
-                                    </Typography>
-                                    <Typography variant="subtitle1" color="textSecondary">
-                                        {this.props.description}
-                                    </Typography>
-                                    <Typography component="h5" variant="h5">
-                                        Price:{this.props.price}
-                                     </Typography>
-                                     <Typography component="h5" variant="h5">
-                                        Quantity:{this.props.quantity}
-                                     </Typography>
-                                     <p><strong>Ingredients:{([...new Set(this.props.ing)])+","}</strong></p>
-                                    </CardContent>
-                                    
-                                    <div className={classes.buttonControls}>
-                                    <CardActions>
-                                        <Button  variant="contained" color="primary" style={buttonStyle} onClick={()=>this.eliminarHandle(this.props.id)}>
-                                        ELIMINAR
-                                        </Button>
-                                        <Button  variant="contained" color="primary" style={button2Style} onClick={()=>this.editarHandle(this.props.id)}>
-                                        EDITAR
-                                        </Button>
-                                        {/* <IconButton color="default"  onClick={()=>this.add()}><Add/></IconButton>
-                                          <div>{this.state.quantity}</div>
-                                        <IconButton color="default" className={classes.button} onClick={()=>this.negate()}>-</IconButton> */}
-                                    </CardActions>
-                                    </div>
-                                     </div>         
-                                </Card>
-                            </div>
+                //   (this.props.quantity).map((type,key)=>{
+                //     return(
+                    <div>
+                     <div className="container">
+                    <Card className={classes.card} >
+                    <CardMedia
+                     className={classes.cover}
+                     image={this.props.image}
+                     title="This is an item"
+                     />
+                 <div className={classes.details}>
+                 <CardContent className={classes.content}>
+                 <Typography component="h5" variant="h5">
+                     Name:{this.props.name}
+                 </Typography>
+                 <Typography variant="subtitle1" color="textSecondary">
+                     {this.props.description}
+                 </Typography>
+                 <Typography component="h5" variant="h5">
+                     Price:{this.props.price}
+                  </Typography>
+                  {/* <Typography component="h5" variant="h5">
+                     Quantity:{this.props.quantity}
+                  </Typography> */}
+                  <p><strong>Ingredients:{([(this.props.ing)])+","}</strong></p>
+                  {/* <p><strong>Ingredients:{([...new Set(this.props.ing)])+","}</strong></p> */}
+                 </CardContent>
+                 
+                 <div className={classes.buttonControls}>
+                 <CardActions>
+                     <Button  variant="contained" color="primary" style={buttonStyle} onClick={()=>this.eliminarHandle(this.props.id)}>
+                     ELIMINAR
+                     </Button>
+                     <Button  variant="contained" color="primary" style={button2Style} onClick={()=>this.editarHandle(this.props.id)}>
+                     EDITAR
+                     </Button>
+                     {/* <IconButton color="default"  onClick={()=>this.add()}><Add/></IconButton>
+                       <div>{this.state.quantity}</div>
+                     <IconButton color="default" className={classes.button} onClick={()=>this.negate()}>-</IconButton> */}
+                 </CardActions>
+                 </div>
+                  </div>         
+             </Card>
+             </div>  
+            </div>
             )
+                           
+            //     })
+            // )
         }
         else{
             return (

@@ -196,7 +196,7 @@ class PrimarySearchAppBar extends React.Component {
                </Typography>
               </IconButton>
               <IconButton color="inherit" onClick={()=>this.props.history.push('/cart')}>
-              <Badge badgeContent={total.length} color="primary" classes={{ badge: classes.badge }}>
+              <Badge badgeContent={(total.length===undefined)?0:total.length} color="primary" classes={{ badge: classes.badge }}>
                  <ShoppingCart />
                </Badge>
               </IconButton>

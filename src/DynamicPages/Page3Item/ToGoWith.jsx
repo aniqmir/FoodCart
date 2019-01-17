@@ -211,7 +211,7 @@ class FloatingActionButtonZoom extends React.Component {
               Object.values(postres).map((type,index)=> {
                   return(
                    
-                    <Grid item xs={12} md={3}>
+                    <Grid item xs={12} md={3} key={index}>
                     <ToGoWithItem image={type.image}
                     name={type.name}
                     desc={type.desc}
@@ -234,7 +234,7 @@ class FloatingActionButtonZoom extends React.Component {
           {
               Object.values(entradas).map((type,index)=> {
                   return(
-                    <Grid item xs={12} md={3}>
+                    <Grid item xs={12} md={3} key={index}>
                     <ToGoWithItem image={type.image}
                      name={type.name}
                      desc={type.desc}
@@ -256,7 +256,7 @@ class FloatingActionButtonZoom extends React.Component {
           {
               Object.values(bebidas).map((type,index)=> {
                   return(
-                    <Grid item xs={12} md={3}>
+                    <Grid item xs={12} md={3} key={index}>
                     <ToGoWithItem image={type.image}
                     name={type.name}
                     desc={type.desc}

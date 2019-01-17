@@ -54,7 +54,7 @@ class RecipeReviewCard extends React.Component {
         <CardMedia
           style={{backgroundImage:image}}
           className={classes.media}
-         // image={this.props.image}
+          image='noimage'
           title="Paella dish"
         />
         <Snackbar addParaAccomponar={()=>this.addParaAccomponar()}/>

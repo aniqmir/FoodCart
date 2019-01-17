@@ -13,6 +13,7 @@ var item_ID
 var array2
 var array3
 let tempArr = []
+
 export default class Page3 extends React.Component{
 
     constructor (props) {
@@ -93,7 +94,7 @@ export default class Page3 extends React.Component{
         this.ingredientsCheck();
         }
         
-        array3[0][4]=this.state.quantity
+       
 
         if((cartIngredients.length!==0)){
           
@@ -103,8 +104,27 @@ export default class Page3 extends React.Component{
                 array3[0].pop()
             }
          }
-         console.log(array3[0])
-         array.push(array3[0])
+        //  console.log(array3[0])
+ 
+         if(this.state.quantity>1){
+            let arrtempo = []
+            let arrtempo2 = []
+      
+            for(var j=0;j<this.state.quantity;j++){
+                arrtempo = array3[0] 
+                arrtempo[5] = ((j+1)+(Math.floor(Math.random()))+Math.floor(Math.random()*(999)))
+                console.log(arrtempo)
+                arrtempo2.push([...arrtempo])
+                
+        }
+        // console.log(arrtempo2)
+        array.push(...arrtempo2)
+        console.log(array)
+     }
+     
+           
+        else {array.push(array3[0])
+        console.log(array)}
          localStorage.setItem('cart',JSON.stringify(array))
         cartIngredients = []
        
@@ -212,11 +232,11 @@ export default class Page3 extends React.Component{
                 <Grid container>
                     
                  {
-                    Object.values(this.state.data).map((type)=>{
+                    Object.values(this.state.data).map((type,index)=>{
                     //console.log(type);
                     return ( 
-                    <div>
-                    <Grid item xs={12}>
+                    <div key={index}>
+                    <Grid item xs={12} key={index}>
                         <h5> Regresar A Menu </h5>
                         <h2>{type[0]}</h2>
                         <h3>{type[2]}.00</h3>
@@ -255,7 +275,7 @@ export default class Page3 extends React.Component{
                         {
                         Object.values(dataItem1).map((type,index)=>{
                             return (
-                                <Grid item xs={6} md={2}>
+                                <Grid item xs={6} md={2} key={index}>
                                 <Item1
                                 name={type.name}
                                 func={(ingredients)=>this.func(ingredients)}
@@ -268,7 +288,7 @@ export default class Page3 extends React.Component{
                     </Grid>
                 </Grid>
 
-                <Grid item xs={12} style={{paddingTop:'5%'}} direction="row">
+                <Grid item container xs={12} style={{paddingTop:'5%'}} direction="row">
                         <Grid container spacing={0} direction="row">
                         <Grid item xs={12}>
                         <h2>PARA ACOMPANAR</h2>

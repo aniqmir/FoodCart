@@ -80,7 +80,7 @@ class Cart extends React.Component {
                     {
                     Object.values(this.state.check).map((type,key)=> {
                         return (
-                            <Grid item xs={12} sm={12} md={12}>
+                            <Grid item xs={12} sm={12} md={12} key={key}>
                             <CartItems
                             name={type[0]}
                             description={type[1]}
@@ -89,7 +89,8 @@ class Cart extends React.Component {
                             quantity={type[4]}
                             id={type[5]}
                             ing={type[6]}
-                            history={this.props.history}/>
+                            history={this.props.history}
+                            />
                             </Grid>
                         )
                     })             
@@ -110,7 +111,7 @@ class Cart extends React.Component {
 
 Cart.propTypes = {
     classes: PropTypes.object.isRequired,
-    theme: PropTypes.object.isRequired,
+    //theme: PropTypes.object.isRequired,
   };
 
   export default withStyles({ withTheme: true })(Cart)

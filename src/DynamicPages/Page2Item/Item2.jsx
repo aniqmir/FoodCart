@@ -33,7 +33,7 @@ class RecipeReviewCard extends React.Component {
         <CardMedia
           style={{backgroundImage:image}}
           className={classes.media}
-          //image={Image}
+          image='noimage'
           title="Paella dish"
         />
         </CardActionArea>

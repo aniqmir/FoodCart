@@ -55,7 +55,7 @@ export default class Item1 extends React.Component{
 }
     render() {
         return(
-            <Button onClick={()=>{this.colorChange()}} style={{width:'100%',height:'150%'}} color={this.state.color} variant='raised'>
+            <Button onClick={()=>{this.colorChange()}} style={{width:'100%',height:'150%'}} color={this.state.color} variant='contained'>
                 {this.props.name}
             </Button>
         )

@@ -94,7 +94,7 @@ export default class Page1 extends React.Component{
                 </Grid>
                 {Object.values(signature).map((type,index) => {
                     return (
-                        <Grid item xs={12} sm={4} md={4}>
+                        <Grid item xs={12} sm={4} md={4} key={index}>
                                 <Item
                                 name={type.name}
                                 description={type.description}
@@ -110,7 +110,7 @@ export default class Page1 extends React.Component{
                 </Grid>
                 {Object.values(especialidades).map((type,index) => {
                     return (
-                        <Grid item xs={12} sm={4} md={4}>
+                        <Grid item xs={12} sm={4} md={4} key={index}>
                             <Item
                             name={type.name}
                             description={type.description}
